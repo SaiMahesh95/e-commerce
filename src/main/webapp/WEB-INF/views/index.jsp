@@ -37,7 +37,7 @@
                         <li role="presentation"><a href="product${category.categoryId}">${category.categoryName}</a></li>
                            	
                             <!-- <!-- <li role="presentation"><a href="#">KTM </a></li>
-                            <li role="presentation"><a href="#">Royal Enfield</a></li>
+                            <li role="presentation"><a href="royal enfield">Royal Enfield</a></li>
                             <li role="presentation"><a href="#">Harley Davidson</a></li>
                             <li role="presentation"><a href="#">Yamaha </a></li>
                             <li role="presentation"><a href="#">Ducati </a></li>

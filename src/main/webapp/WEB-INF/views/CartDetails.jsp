@@ -1,4 +1,4 @@
-e<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
  <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -13,41 +13,10 @@ e<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
 </head>
 <body>
-
-<%-- <c:forEach items="${cartList}" var="cd">
- 
-            
-                <div class="col-md-4 col-md-offset-0">
-                    <div>
-                        <div class="row">
-                            <div class="col-md-12"><img atl="${cd.id}"
-			src="<c:url value="/resources/images/${product.id}.jpg"></c:url>">></div>
-                            <div class="col-md-12">
-                                <h4>${cd.id}</h4>
-                                <p>
-                                <ul>
-                                <li> ${cd.productname}</li>
-                                <li> ${cd.subTotal}</li>
-                               
-                                <li>
-                                <form:form action="addToCart/${product.id}" method="POST">
-                                <input type="submit" value="Add to Cart" class="btn btn-primary">
-                                </form:form>
-                                </li>
-                                </ul></p>
-                            </div>
-                        </div>
-                    </div>
-                
-                </div>
-                
-           </c:forEach>
-        </div>
- --%>
- 
-			
  <div class="container">
         <div class="well">     
+<c:forEach items="${cartList}" var="cd">
+
 		<table class ="table table-hover ">
 		<thead>
 		<tr>
@@ -66,7 +35,6 @@ e<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 </thead>	
 <tbody>	
 
-<c:forEach items="${cartList}" var="cd">
 <form:form action="cart.do/${cd.id}" method="POST">
 		<tr>
 			<%-- <td>${cd.id}</td>
@@ -84,18 +52,21 @@ e<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 				</td>
 				
 			
-			<%-- <td><div class="thumbnail">
-			<img height="200px" width="200px" atl="${product.id}"
-			src="<c:url value="/resources/images/${product.id}.jpg"></c:url>">
-			</div></td> --%>
+			 <td><div class="thumbnail">
+			<img height="200px" width="200px" atl="${product.productid}"
+			src="<c:url value="/resources/images/${product.productid}.jpg"></c:url>">
+			</div></td> 
 			
 			
 		</tr>
 		</form:form>
-	</c:forEach>
+	
 	</tbody>	
 	
 </table>
+<a href="index" class="btn btn-danger" role="button">Continue Shopping</a>
+<a href="${cd.userid}" class="btn btn-success" role="button">CheckOut</a>
+</c:forEach>
 </div>
 </div>
 
