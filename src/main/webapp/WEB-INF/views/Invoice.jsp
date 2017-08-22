@@ -98,6 +98,11 @@
  </div>
  
 </div>
+<div class="row">
+<div class="col-md-offset-2 col-md-2">
+<button class="btn btn-info" onclick="printDiv('printableArea'">Print Invoice</button>)
+</div>
+</div>
 
  
  <form:form action="index">  
