@@ -126,9 +126,9 @@
                 <div class="row">
                     <div class="col-md-4 col-sm-6 footer-navigation">
                         <h3><a href="#">SpeedSters </a></h3>
-                        <p class="links"><a href="#">Home</a><strong> · </strong><a href="#">Blog</a><strong> · </strong><a href="#">Pricing</a><strong> · </strong><a href="#">About</a><strong> · </strong><a href="#">Faq</a><strong> · </strong><a href="#">Contact</a></p>
+                        <p class="links"><a href="#">Home</a><strong> Â· </strong><a href="#">Blog</a><strong> Â· </strong><a href="#">Pricing</a><strong> Â· </strong><a href="#">About</a><strong> Â· </strong><a href="#">Faq</a><strong> Â· </strong><a href="#">Contact</a></p>
                         <p
-                        class="company-name">Speedsters© 2015 </p>
+                        class="company-name">SpeedstersÂ© 2017 </p>
                     </div>
                     <div class="col-md-4 col-sm-6 footer-contacts">
                         <div><span class="fa fa-map-marker footer-contacts-icon"> </span>
@@ -144,7 +144,7 @@
                     <div class="clearfix visible-sm-block"></div>
                     <div class="col-md-4 footer-about">
                         <h4>About the company</h4>
-                        <p> Lorem ipsum dolor sit amet, consectateur adispicing elit. Fusce euismod convallis velit, eu auctor lacus vehicula sit amet.
+                        <p> About SpeedSters Indiaâ€™s Ultimate Online Shopping Site SpeedSters vision is to create Indiaâ€™s most reliable and frictionless commerce ecosystem that creates life changing experiences for buyers and sellers. In August 2017, Sai Mahesh along with Algot Batch, started SpeedSters.com 
                         </p>
                         <div class="social-links social-icons"><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-linkedin"></i></a><a href="#"><i class="fa fa-github"></i></a></div>
                     </div>
