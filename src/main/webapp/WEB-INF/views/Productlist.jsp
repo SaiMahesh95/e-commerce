@@ -34,7 +34,7 @@
                     <table class="table">
                         <thead>
                             <tr>
-                                <th>SpecificationS </th>
+                                <th>Specifications </th>
                                 <th>Details </th>
                             </tr>
                         </thead>
