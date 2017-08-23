@@ -23,7 +23,7 @@
         <li><a href="#">Supplier </a></li>
         <li><a href="#">Product </a></li>
     </ul>
-        <form:form method="POST" action="product.do" enctype="multipart/form-data" modelAttribute="product">
+        <form:form method="POST" action="product.do"  modelAttribute="product" enctype="multipart/form-data">
             
     <div class="container">
         <div class="well">
@@ -91,9 +91,11 @@
         <div class="well">
            
                 <div class="row">
-        <form:input type="file"
+        <%-- <form:input type="file"
 							class=" btn btn-default btn-block form-control" path="image"
-							required="" />
+							required="" /> --%>
+							
+               <input type="file" name="file" />
 							</div>
 							</div>
         <div class="well">
@@ -153,11 +155,9 @@
 			<td>${product.productDescription}</td>
 			<td>${product.price}</td>
 			<td>${product.stock}</td>
-			<td><div class="thumbnail">
-								<img height="100px" width="100px" alt="${product.productid }"
-									src="<c:url value="/resources/images/${product.productid }.jpg"></c:url>">
-							</div></td>
+			<td><div class="thumbnail"> <img src="/Ecommerce/myImage/imageDisplay?id=${product.productid}" alt="" width="298" height="398" />
 			
+			</div></td>
 		</tr>	
 	</c:forEach>	
     </table>
