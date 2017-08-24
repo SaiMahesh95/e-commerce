@@ -19,9 +19,9 @@
     <body>
         <h3>Welcome, Enter The Product Details</h3>
         <ul class="nav nav-tabs">
-        <li class="active"><a href="#">Category </a></li>
-        <li><a href="#">Supplier </a></li>
-        <li><a href="#">Product </a></li>
+        <li class="active"><a href="category">Category </a></li>
+        <li><a href="supplier">Supplier </a></li>
+        <li><a href="product">Product </a></li>
     </ul>
         <form:form method="POST" action="product.do"  modelAttribute="product" enctype="multipart/form-data">
             
@@ -74,7 +74,7 @@
                         <form:input path="price" class="form-control input-sm" type="text"/>
                     </div>
                 </div>
-            
+            </div>
         </div>
         <div class="well">
             
@@ -86,18 +86,26 @@
                         <form:input path="stock" class="form-control input-sm" type="text"/>
                     </div>
                 </div>
+                
+               
             
         </div>
         <div class="well">
+         <div class="row">
+                    <div class="col-lg-offset-3 col-sm-2 col-xs-3">
+                        <form:label path="image">Image </form:label>
+                    </div>
+                    </div>
+        
            
                 <div class="row">
-        <%-- <form:input type="file"
-							class=" btn btn-default btn-block form-control" path="image"
-							required="" /> --%>
 							
-               <input type="file" name="file" />
+               <input type="file"  name="file" />
 							</div>
 							</div>
+							
+           
+           
         <div class="well">
            
                 <div class="row">
@@ -146,6 +154,7 @@
 	<th>Product desc</th>
 	<th>Product price</th>
     <th>Product stock</th>
+   
     <th>Product image</th>
 	
 	<c:forEach items="${productList}" var="product">
@@ -155,6 +164,7 @@
 			<td>${product.productDescription}</td>
 			<td>${product.price}</td>
 			<td>${product.stock}</td>
+			
 			<td><div class="thumbnail"> <img src="/Ecommerce/myImage/imageDisplay?id=${product.productid}" alt="" width="298" height="398" />
 			
 			</div></td>

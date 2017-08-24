@@ -18,6 +18,7 @@ import com.springproject.dao.CartDAO;
 import com.springproject.dao.CartDAOImpl;
 import com.springproject.dao.ProductDAO;
 import com.springproject.model.Cart;
+import com.springproject.model.Category;
 import com.springproject.model.Product;
 
 import com.springproject.service.CategoryService;
@@ -35,10 +36,12 @@ public class HomeController {
 	@Autowired
 	SessionFactory 	sessionFactory;*/
 	
-	@RequestMapping(value="/product{Categoryid}", method=RequestMethod.GET)
-	public String categoryList(@PathVariable ("Categoryid") int Categoryid , Map<String,Object> map , Model model)
+	@RequestMapping(value="/product{Categoryid}/{categoryDescription}", method=RequestMethod.GET)
+	public String categoryList(@PathVariable ("categoryDescription") String categoryDescription,@PathVariable ("Categoryid") int Categoryid , Map<String,Object> map , Model model)
 	{
+		
 		Product product = new Product();
+		map.put("category", categoryDescription);
 		map.put("product", product);
 		map.put("Listpro", productDAO.getProductByCategory(Categoryid));
 		return "Productlist";

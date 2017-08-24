@@ -1,5 +1,6 @@
 package com.springproject.controller;
 
+import java.io.IOException;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,6 +11,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.multipart.MultipartFile;
 
 import com.springproject.dao.CategoryDAO;
 import com.springproject.model.Category;
@@ -54,12 +56,13 @@ public String addCategory(@ModelAttribute("category")Category category,Model mod
 	
 	
 	@RequestMapping(value="/category.do", method=RequestMethod.POST)
-	public String doActions(@ModelAttribute Category category, BindingResult result, @RequestParam String action, Map<String, Object> map){
+	public String doActions(@ModelAttribute Category category, BindingResult result, @RequestParam String action, Map<String, Object> map) throws IOException{
 		Category categoryResult = new Category();
 			//only in Java7 you can put String in switch
 		 if (action.equals("Add"))
 		 {
 			categoryService.add(category);
+			 
 			categoryResult = category;
 			
 		 }

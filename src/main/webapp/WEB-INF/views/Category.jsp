@@ -28,9 +28,9 @@
             </div>
             <div class="collapse navbar-collapse" id="navcol-1">
                 <ul class="nav navbar-nav">
-                    <li role="presentation"><a href="#">Category </a></li>
-                    <li role="presentation"><a href="#">Supplier </a></li>
-                    <li role="presentation"><a href="#">Product </a></li>
+                    <li role="presentation"><a href="category">Category </a></li>
+                    <li role="presentation"><a href="supplier">Supplier </a></li>
+                    <li role="presentation"><a href="product">Product </a></li>
                 </ul>
             </div>
         </div>

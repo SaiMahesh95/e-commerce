@@ -33,7 +33,7 @@ public class CartController {
 
 	
 	
-    @RequestMapping(value="addToCart/{id}")
+    @RequestMapping(value="product{categoryid}/addToCart/{id}")
     public String addProductToCart(@PathVariable("id") int id, HttpSession session,Model model)
     {
     	int userId = (Integer) session.getAttribute("userid");
@@ -45,9 +45,10 @@ public class CartController {
 			System.out.println(item);
 			item.setProductprice(p.getPrice());
 			model.addAttribute("message", p.getProductName() +"is already exist");
-			item.setSubTotal(item.getProductprice() + (q*p.getPrice()));
 			cartDAO.saveProductToCart(item);
-			return "ProductList";
+			item.setSubTotal((item.getQuantity()*p.getPrice()));
+			cartDAO.saveProductToCart(item);
+			return "redirect:/cart";
 		} else {
 			Cart item = new Cart();
 			Product p = productDAO.getProduct(id);

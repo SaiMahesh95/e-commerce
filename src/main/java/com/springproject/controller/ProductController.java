@@ -80,21 +80,6 @@ public class ProductController {
 		Product productResult = new Product();
 		 if (action.equals("Add"))
 		 {
-			 
-		
-				/*String rootDirectory = request.getSession().getServletContext().getRealPath("/");
-		        path = Paths.get(rootDirectory + "\\resources\\images\\"+product.getProductid()+".jpg");
-		        if (file != null && !file.isEmpty()) {
-		            try {
-		            	System.out.println("Image Saving Start");
-		            	file.transferTo(new File(path.toString()));
-		            	System.out.println("Image Saved");
-		            } catch (Exception e) {
-		                e.printStackTrace();
-		                System.out.println("Error");
-		                throw new RuntimeException("item image saving failed.", e);
-		            }
-		        }*/
 		        productResult = product;
 		        product.setImage(file.getBytes());
 		        productService.add(product);
@@ -123,8 +108,3 @@ public class ProductController {
 		return "Product";
 	}
 	}
-	
-	
-	
-	
-

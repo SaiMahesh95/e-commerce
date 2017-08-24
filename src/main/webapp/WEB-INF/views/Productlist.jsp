@@ -16,7 +16,7 @@
 <body>
     <nav class="navbar navbar-default">
         <div class="container">
-            <div class="navbar-header"><a class="navbar-brand navbar-link" href="#">kTM</a>
+            <div class="navbar-header"><a class="navbar-brand navbar-link" href="#">${categoryDescription}</a>
                 <button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
             </div>
             <div class="collapse navbar-collapse" id="navcol-1">
@@ -24,11 +24,12 @@
             </div>
         </div>
     </nav>
-    <h1>DUKE 200</h1>
+      
     <c:forEach items="${Listpro}" var="product">
+   
     <div class="container">
         <div class="row product">
-            <div class="col-md-5 col-md-offset-0"><img class="img-responsive" src="<c:url value="/resources/assets/img/ktm-duke-200.jpg"/>"></div>
+            <div class="col-md-5 col-md-offset-0"><img src="/Ecommerce/myImage/imageDisplay?id=${product.productid}" alt="" width="300" height="200" /></div>
             <div class="col-md-7">
                 <div class="table-responsive">
                     <table class="table">

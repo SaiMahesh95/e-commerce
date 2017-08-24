@@ -34,7 +34,7 @@
                     <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true" href="#"><em>BIKES</em><span class="caret"></span></a>
                          <ul class="dropdown-menu" role="menu">
                         <c:forEach items="${categoryList}" var="category">
-                        <li role="presentation"><a href="product${category.categoryId}">${category.categoryName}</a></li>
+                        <li role="presentation"><a href="product${category.categoryId}/${category.categorydescription}">${category.categoryName}</a></li>
                            	
                             <!-- <!-- <li role="presentation"><a href="#">KTM </a></li>
                             <li role="presentation"><a href="royal enfield">Royal Enfield</a></li>

@@ -39,6 +39,8 @@ public class Product implements Serializable
 	private int price;
 	private int stock;
 	
+	
+
 
 	@ManyToOne(fetch=FetchType.EAGER)
 	@JoinColumn(name="Catid", updatable=false, insertable=false ,nullable=false )
@@ -58,6 +60,8 @@ public class Product implements Serializable
 	public void setProductid(int productid) {
 		this.productid = productid;
 	}
+
+	
 
 	public String getProductName() {
 		return productName;
