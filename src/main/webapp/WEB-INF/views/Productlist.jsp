@@ -53,7 +53,7 @@
                                 <td>${product.productDescription} </td>
                             </tr>
                             <tr>
-                                <td>colours </td>
+                                <td>colourS </td>
                                 <td>Orange,Black,White </td>
                             </tr>
                         </tbody>
