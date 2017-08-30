@@ -2,6 +2,7 @@
     pageEncoding="ISO-8859-1"%>
     <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
    
+   <%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags"%>
     <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page import="java.util.List"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -33,6 +34,12 @@
                     <li class="active" role="presentation"><a href="category">Category </a></li>
                     <li role="presentation"><a href="supplier">Supplier</a></li>
                     <li role="presentation"><a href="product">Product </a></li>
+                    
+                     
+                    <sec:authorize access="isAuthenticated()">
+                 <li><a href="<c:url value="j_spring_security_logout"/>">Logout</a></li>
+                 <li role="presentation"><a href="index">Home</a></li>
+                  </sec:authorize>
                 </ul>
             </div>
         </div>
@@ -40,7 +47,7 @@
     <div class="container">
         <div class="well">
             
-                <div class="row">
+                <div class="row pad">
                     <div class="col-lg-offset-4 col-sm-2 col-xs-6">
                         <form:label path="supplierid">Supplier Id </form:label>
                     </div>
@@ -49,10 +56,9 @@
                     </div>
                 </div>
             
-        </div>
-        <div class="well">
+       
             
-                <div class="row">
+                <div class="row pad">
                     <div class="col-lg-offset-4 col-sm-2 col-xs-6">
                         <form:label path="supplierName">Supplier Name </form:label>
                     </div>
@@ -61,35 +67,37 @@
                     </div>
                 </div>
             
-        </div>
-        <div class="well">
             
-                <button class="btn btn-primary" type="submit">Button</button>
-            
-        </div>
-    </div>		
+             
+     	
     <td colspan="2">
 				<input type="submit" name="action" value="Add" />
 				<input type="submit" name="action" value="Edit" />
 				<input type="submit" name="action" value="Delete" />
 				<input type="submit" name="action" value="Search" />
 			</td>
-	
+	</div>
+	</div>
 </form:form>
 <br>
+<div class="container">
+<div class="well">
+
 <table border="1">
 	<th>ID</th>
 	<th>Supplier name</th>
 		
 	<c:forEach items="${supplierList}" var="supplier">
 		<tr>
-			<td>${supplier.supplierid}</td>
-			<td>${supplier.supplierName}</td>
+			<td colspan="2">${supplier.supplierid}</td>
+			<td colspan="2">${supplier.supplierName}</td>
 			
 			
 		</tr>
 	</c:forEach>
 </table>
+</div>
+</div>
 <script src="<c:url value="/resources/assets/js/jquery.min.js"/>"></script>
     <script src="<c:url value="/resources/assets/bootstrap/js/bootstrap.min.js"/>"></script>
 </body>

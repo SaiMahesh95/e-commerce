@@ -2,6 +2,7 @@
     pageEncoding="ISO-8859-1"%>
     <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
    
+   <%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags"%>
     <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page import="java.util.List"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -31,7 +32,13 @@
                     <li role="presentation"><a href="category">Category </a></li>
                     <li role="presentation"><a href="supplier">Supplier </a></li>
                     <li role="presentation"><a href="product">Product </a></li>
+                     
+                    <sec:authorize access="isAuthenticated()">
+                 <li><a href="<c:url value="j_spring_security_logout"/>">Logout</a></li>
+                 <li role="presentation"><a href="index">Home</a></li>
+                  </sec:authorize>
                 </ul>
+                
             </div>
         </div>
     </nav>
@@ -39,7 +46,7 @@
     <div class="container">
         <div class="well">
           
-                <div class="row">
+                <div class="row pad">
                     <div class="col-sm-2 col-xs-6">
                         <form:label path="categoryId">Category Id</form:label>
                     </div>
@@ -47,11 +54,9 @@
                         <form:input path="categoryId" class="form-control input-sm" type="text"/>
                     </div>
                 </div>
-          
-        </div>
-        <div class="well">
+       
             
-                <div class="row">
+                <div class="row pad">
                     <div class="col-sm-2 col-xs-6">
                         <form:label path="categoryName">Category Name</form:label>
                     </div>
@@ -59,11 +64,8 @@
                         <form:input path="categoryName" class="form-control input-sm" type="text"/>
                     </div>
                 </div>
-           
-        </div>
-        <div class="well">
             
-                <div class="row">
+                <div class="row pad">
                     <div class="col-sm-2 col-xs-6">
                         <form:label path="categorydescription">Description </form:label>
                     </div>
@@ -82,6 +84,7 @@
     </div>
     
    </form:form>
+   <div class="container">
    <div class="well">
 <br>
 <table border="1">
@@ -91,13 +94,14 @@
 	
 	<c:forEach items="${categoryList}" var="category">
 		<tr>
-			<td>${category.categoryId}</td>
-			<td>${category.categoryName}</td>
-			<td>${category.categorydescription}</td>
+			<td colspan="2">${category.categoryId}</td>
+			<td colspan="2">${category.categoryName}</td>
+			<td colspan="2"> ${category.categorydescription}</td>
 			
 		</tr>
 	</c:forEach>
 </table>
+</div>
 </div>
 <script src="<c:url value="/resources/assets/js/jquery.min.js"/>"></script>
     <script src="<c:url value="/resources/assets/bootstrap/js/bootstrap.min.js"/>"></script>

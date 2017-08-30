@@ -10,7 +10,10 @@ footer{
   bottom:0;
   color:#fff;
 }
-
+.pad
+{
+	padding:20px;
+}
 .footer-navigation h3{
   margin:0;
   font:normal 36px Cookie, cursive;
