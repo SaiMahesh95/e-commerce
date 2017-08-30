@@ -51,11 +51,12 @@
                         <form:input class="form-control" path="password" type="password"/>
                     </div>
                 </div>
+                <button class="btn btn-default submit-button" type="submit">Submit Form</button>
                 <%-- <div class="checkbox">
                     <form:label>
                         <form:input type="checkbox"/>I've read and accept the terms and conditions</form:label>
                 </div> --%>
-                <button class="btn btn-default submit-button" type="submit">Submit Form</button>
+                
             </form>
         </div>
     </div>
