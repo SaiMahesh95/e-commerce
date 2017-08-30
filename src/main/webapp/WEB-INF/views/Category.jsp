@@ -75,12 +75,16 @@
                 </div>
             
         </div>
+       
+        
         <td colspan="2">
-    <input type="submit" name="action" value="Add" />
-				<input type="submit" name="action" value="Edit" />
-				<input type="submit" name="action" value="Delete" />
-				<input type="submit" name="action" value="Search" />
-				</td>
+        <div align="center">
+               
+                <button class= "btn btn-warning" type="submit" name="action" value="Add"><span class="glyphicon glyphicon-plus"></span></button>
+				<button class= "btn btn-warning" type="submit" name="action" value="Edit"><span class="glyphicon glyphicon-edit"></span></button>
+				<button class= "btn btn-warning" type="submit" name="action" value="Delete"><span class="glyphicon glyphicon-trash"></span></button>
+				<button class= "btn btn-warning" type="submit" name="action" value="Search"><span class="glyphicon glyphicon-search"></span></button>
+				</div></td>
     </div>
     
    </form:form>

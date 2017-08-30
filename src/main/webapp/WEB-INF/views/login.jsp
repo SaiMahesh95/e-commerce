@@ -30,12 +30,7 @@
         <form:form  method="post" action="${actionUrl }" class="form-signin"><span class="reauth-email"> </span>
             <input name="j_username" class="form-control" type="email" required="" placeholder="Email address" autofocus="" id="inputEmail"/>
             <input name="j_password" class="form-control" type="password" required="" placeholder="Password" id="inputPassword"/>
-            <div class="checkbox">
-                <div class="checkbox">
-                    <label>
-                        <input type="checkbox">Remember me</label>
-                </div>
-            </div>
+             
             <button class="btn btn-primary btn-block btn-lg btn-signin" type="submit">Sign in</button>
         </form:form>
         

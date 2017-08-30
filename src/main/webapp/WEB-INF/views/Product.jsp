@@ -136,12 +136,12 @@
                         </form:select>
                     </div>
                 </div>
-						
-				<input type="submit" name="action" value="Add" />
-				<input type="submit" name="action" value="Edit" />
-				<input type="submit" name="action" value="Delete" />
-				<input type="submit" name="action" value="Search" />
-			</div>
+				<div align="center">		
+				<button class= "btn btn-warning" type="submit" name="action" value="Add"><span class="glyphicon glyphicon-plus"></span></button>
+				<button class= "btn btn-warning" type="submit" name="action" value="Edit"><span class="glyphicon glyphicon-edit"></span></button>
+				<button class= "btn btn-warning" type="submit" name="action" value="Delete"><span class="glyphicon glyphicon-trash"></span></button>
+				<button class= "btn btn-warning" type="submit" name="action" value="Search"><span class="glyphicon glyphicon-search"></span></button>
+			</div></div>
 			</div>
 			</div>
      <br>      

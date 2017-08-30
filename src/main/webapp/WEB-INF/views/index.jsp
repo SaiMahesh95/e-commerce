@@ -70,7 +70,7 @@
         </div>
     </nav>
     <div></div>
-    <div class="carousel slide" data-ride="carousel" data-interval="false" id="carousel-1">
+    <div class="carousel slide" data-ride="carousel" data-interval="2000" id="carousel-1">
         <div class="carousel-inner" role="listbox">
             <div class="item active"><img src="<c:url value="/resources/assets/img/10805233813_19d7a191ab_o.jpg"/>" alt="Slide Image"></div>
             <div class="item"><img src="<c:url value="/resources/assets/img/moto_harley_harley_davidson_883_74175_1920x1080.jpg"/>" alt="Slide Image"></div>
@@ -82,9 +82,9 @@
         </div>
         <ol class="carousel-indicators">
             <li data-target="#carousel-1" data-slide-to="0" class="active"></li>
-            <li data-target="#carousel-1" data-slide-to="1"></li>
-            <li data-target="#carousel-1" data-slide-to="2"></li>
-            <li data-target="#carousel-1" data-slide-to="3"></li>
+            <li data-target="#carousel-1" data-slide-to="1" ></li>
+            <li data-target="#carousel-1" data-slide-to="2" ></li>
+            <li data-target="#carousel-1" data-slide-to="3" ></li>
         </ol>
     </div>
     <div class="jumbotron">
@@ -127,7 +127,7 @@
                 <div class="row">
                     <div class="col-md-4 col-sm-6 footer-navigation">
                         <h3><a href="#">SpeedSters </a></h3>
-                        <p class="links"><a href="#">Home</a><strong> · </strong><a href="#">Blog</a><strong> · </strong><a href="#">Pricing</a><strong> · </strong><a href="#">About</a><strong> · </strong><a href="#">Faq</a><strong> · </strong><a href="#">Contact</a></p>
+                        <p class="links"><a href="#">Home</a><strong> · </strong><a href="#">Blog</a><strong> · </strong><a href="#">Pricing</a><strong> · </strong> <a href="#">About</a><strong> · </strong><a href="#">Faq</a><strong> · </strong><a href="#">Contact</a></p>
                         <p
                         class="company-name">Speedsters© 2017 </p>
                     </div>
